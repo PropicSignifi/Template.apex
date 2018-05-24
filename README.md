@@ -17,5 +17,5 @@ Template.apex uses Funcs from R.apex as the callback mechanism. If you want to g
 To evaluate a template written in visualforce expression syntax, what you need is only one line.
 
 ```java
-String output = new Template().evaluate('Hi {! UPPER(acc.Name) }', new Map<String, Object>{ 'acc' => new Account(...) };
+String output = new Template().evaluate('Hi {! UPPER(acc.Name) }', new Map<String, Object>{ 'acc' => new Account(...) });
 ```
