@@ -1,0 +1,121 @@
+---
+title: "Home"
+description: "Template.apex is a library to evaluate templates written in visualforce expression syntax."
+---
+
+{namespace pageIndex}
+
+/**
+ */
+{template .render}
+	{@param site: ?}
+
+	{call main.render data="all"}
+		{param content kind="html"}
+			{call .header data="all" /}
+			{call .why /}
+			{call .features /}
+			{call .how /}
+			{call .highlights /}
+			{call Footer.render data="all" /}
+		{/param}
+	{/call}
+{/template}
+
+/**
+ */
+{template .header}
+	{@param site: ?}
+
+	<header class="header">
+		<div class="container">
+			<h1 class="header-title">{$site.title}</h1>
+			<h2 class="header-subtitle">{$site.index.description}</h2>
+			<div class="btn-group">
+				<a href="/template-apex/tutorials/getting_started/step_1.html" class="btn btn-accent btn-sm">Get Started</a>
+				<a href="https://github.com/Click-to-Cloud/Template.apex/" class="btn btn-success btn-sm">GitHub</a>
+				<a href="/" onclick="location.assign('/')" class="btn btn-default btn-sm">Not Interested</a>
+			</div>
+		</div>
+	</header>
+{/template}
+
+/**
+ */
+{template .why}
+	<article class="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-2">
+					<h3 class="about-title">Why Template.apex?</h3>
+					<p class="about-description">Sometimes we have the need to provide support for customizable templates like email templates. In these situations, Template.apex can help you evaluate templates written in visualforce expression syntax, which is handy and easy to pick up for those experienced in Salesforce visualforce pages.</p>
+				</div>
+			</div>
+		</div>
+	</article>
+{/template}
+
+/**
+ */
+{template .features}
+	<div class="features">
+		<div class="container">
+			<div class="row">
+				<section class="feature col-md-4 col-md-offset-2">
+					<h3 class="feature-title">Easy to Use</h3>
+					<p class="feature-description">Template.apex offers super easy-to-use API to help you evaluate templates.</p>
+				</section>
+				<section class="feature col-md-4">
+					<h3 class="feature-title">Low Learning Curve</h3>
+					<p class="feature-description">Template.apex uses visualforce expression syntax and it's easy for Salesforce developers.</p>
+				</section>
+				<section class="feature col-md-4">
+					<h3 class="feature-title">Customizable</h3>
+					<p class="feature-description">Template.apex can be easily customized.</p>
+				</section>
+			</div>
+		</div>
+	</div>
+{/template}
+
+/**
+ */
+{template .how}
+	<article class="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-2">
+					<h3 class="about-title">Easy Template Engine</h3>
+					<p class="about-description">Pick it up and evalute your templates.</p>
+				</div>
+			</div>
+		</div>
+	</article>
+{/template}
+
+/**
+ */
+{template .highlights}
+	<div class="highlights">
+		<div class="container">
+			<section class="highlight row">
+				<div class="col-md-6 col-md-offset-2">
+					<h4 class="highlight-title">Easy Evaluation</h4>
+					<p class="highlight-description">Template.apex evaluates templates written in visualforce expression syntax.</p>
+				</div>
+				<div class="col-md-5 col-md-offset-1">
+					<img class="highlight-image" src="/template-apex/images/highlight_1.png" alt="Easy Evaluation" height="200">
+				</div>
+			</section>
+			<section class="highlight row">
+				<div class="col-md-6 col-md-push-9">
+					<h4 class="highlight-title">Customization</h4>
+					<p class="highlight-description">Template.apex is open to customization.</p>
+				</div>
+				<div class="col-md-5 col-md-offset-2 col-md-pull-6">
+					<img class="highlight-image" src="/template-apex/images/highlight_2.png" alt="Customization" height="200">
+				</div>
+			</section>
+		</div>
+	</div>
+{/template}
